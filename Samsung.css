@@ -71,25 +71,34 @@ body{
     background-color: black;
     color: white;
 }
+.hamburgerlist{
+    display: none;
+}
 
 @media (max-width:1200px) {
     .navdiv{
         display: none;
     }
-    navdiv{
+    .hamburgerlist{
         position: fixed;
         right: -100%;
         top: 70px;
+        width: 300px;
+        height: 400px;
         gap: 0;
         flex-direction: column;
-        background-color: green;
-        width: 100%;
-        text-align: center;
+        background-color: white;
+        text-align: left;
         transition: 0.3s;
+        z-index: 3;
+        font-size: large;
+        
+
     }
-    navdiv.active{
+    .hamburgerlist.active{
         display: block;
         right: 0;
+        list-style: none;
     }
     
 }

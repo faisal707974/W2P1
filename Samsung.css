@@ -76,8 +76,23 @@ body{
     .navdiv{
         display: none;
     }
+    navdiv{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: green;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    navdiv.active{
+        display: block;
+        right: 0;
+    }
+    
 }
-
 
 
 
@@ -165,7 +180,15 @@ body{
 .hamburger{
     display: block;
 }
-
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
 
 }
 
